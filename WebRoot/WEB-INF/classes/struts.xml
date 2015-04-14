@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+
+    <package name="default" extends="struts-default">
+        <action name="Hello2">
+            <result>/Hello.jsp</result>
+        </action>
+        <action name="PlanDeal" method="DealList" class="com.action.stock.PlanDealAction">
+        	<result>/list.jsp</result>
+        	<result name="list">/PlanDealList.jsp</result>
+        </action>
+    </package>
+    <!-- Add packages here -->
+
+</struts>
